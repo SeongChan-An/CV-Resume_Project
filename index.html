@@ -16,14 +16,14 @@
     <script src="src/javascripts/main.js" defer></script>
 </head>
 <body>
-    <!-- Mavbar -->
+    <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
         <img src="./images/favicon.png" style="width: 50px; height:50px;"></img>
         <a href="javascript:void(0);">Seongchan</a>
       </div>
       <ul class="navbar__menu">
-        <li class="navbar__menu__item">Home</li>
+        <li class="navbar__menu__item active">Home</li>
         <li class="navbar__menu__item">About</li>
         <li class="navbar__menu__item">Skills</li>
         <li class="navbar__menu__item">My work</li>
@@ -31,11 +31,11 @@
       </ul>
     </nav>
     <!-- Home -->
-    <section class="home">
+    <section id="home">
       <img src="images/Holland.png" alt="Seongchan's photo in Netherlands" class="home__photo">
       <h1 class="home__title">Hello, <br/> I'm Seongchan</h1>
-      <h2 class="heom__description">To keep moving forward</h2>
-      <button class="home_btnContact">Contact Me</button>
+      <h2 class="home__description">To keep moving forward</h2>
+      <button class="home__btnContact">Contact Me</button>
     </section>
     <!-- About -->
     <section id="about">
@@ -223,11 +223,18 @@
         <button class="category__btn">ETC<span class="category__count"></span></button>
       </div>
       <div class="portfolio__projects">
-        <a href="" class="project" target blank>
-          <img src="" alt="">
+        <a href="https://github.com/SeongChan-An/team6_project" class="project" target blank>
+          <img src="images/projects/Tangerine.png" alt="Tangerine Project">
           <div class="project__description">
             <h3>Tangerine Market</h3>
             <span>Clone coding Carrot Market with HTML and CSS</span>
+          </div>
+        </a>
+        <a href="https://github.com/SeongChan-An/Simple_SNS_Node" class="project" target blank>
+          <img src="images/projects/Node_Project.png" alt="Tangerine Project">
+          <div class="project__description">
+            <h3>Simple SNS</h3>
+            <span>make the simple sns page with Node</span>
           </div>
         </a>
       </div>
