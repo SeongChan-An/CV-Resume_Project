@@ -12,8 +12,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <script src="src/javascripts/main.js" defer></script>
 </head>
 <body>
-    
+    <!-- Mavbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <img src="./images/favicon.png" style="width: 50px; height:50px;"></img>
+        <a href="javascript:void(0);">Seongchan</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item">Home</li>
+        <li class="navbar__menu__item">About</li>
+        <li class="navbar__menu__item">Skills</li>
+        <li class="navbar__menu__item">My work</li>
+        <li class="navbar__menu__item">Contanct</li>        
+      </ul>
+    </nav>
+    <!-- Home -->
+    <section class="home">
+      <img src="images/Holland.png" alt="Seongchan's photo in Netherlands" class="home__photo">
+      <h1 class="home__title">Hello, <br/> I'm Seongchan</h1>
+      <h2 class="heom__description">To keep moving forward</h2>
+      <button class="home_btnContact">Contact Me</button>
+    </section>
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        2016년 12월에 첫 회사에 입사하여 지금까지 IT 업계에서 경력을 쌓았습니다. <br/>
+        초기에 Global Project Navigation part PM을 통해 전반적인 업무 진행사항과 위험관리, 능력을 길렀고 <br/>
+        이후에 프로그래밍의 중요성을 더 얻은 후에 내비게이션 신규 기능 개발, 유지 보수 업무를 했습니다. (C, C++, QT .. etc)
+        <br/>
+        현재는 웹의 확장성과 웹 산업이 빠르게 확장하고 있는 것을 보고 매력을 느끼고 필요한 기술들을 공부하며 프론트엔드 개발자가 되기위해 힘쓰고 있습니다.
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="major__title">
+            Front-end
+          </div>
+          <div class="major__description">
+            HTML, CSS, JavaScript, TypeScript, <br/>  
+            React, Vue, Web APIs
+          </div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <div class="major__title">
+            Front-end
+          </div>
+          <div class="major__description">
+            HTML, CSS, JavaScript, TypeScript, <br/>  
+            React, Chart.js, D3.js, <br/>
+            Bootstrap, jQuery
+          </div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="major__title">
+            Back-end
+          </div>
+          <div class="major__description">
+            JavaScript, Node.js, Express.js, MongoDB, <br/>
+          </div>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-dev"></i>
+          </div>
+          <div class="major__title">
+            DevOps
+          </div>
+          <div class="major__description">
+            AWS, Git, GitLab, docker, Linux <br/>
+          </div>
+        </div>
+        <div class="about__career">
+          <div class="career">
+            <img src="images/telecons_logo.png" alt="telecons logo" class="workspace__logo">
+            <p class="career__description">Programmer - 현대자동차의 Embedded Navigation 의 신규 기능 개발 및 유지보수 </p>
+            <p class="career__period">2019.04-2021.09.30</p>
+          </div>
+          <div class="career">
+            <img src="images/telecons_logo.png" alt="telecons logo" class="workspace__logo">
+            <p class="career__description">Project Manager - LG전자 VS 사업부 르노 프로젝트의 내비게이션 담당</p>
+            <p class="career__period">2016.12-2019.03</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skill -->
+    <section id="sills"></section>
+    <!-- Contact -->
+    <section id="contact"></section>
 </body>
 </html>

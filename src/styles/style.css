@@ -1,0 +1,12 @@
+@import "reset.css";
+
+:root {
+  --base-space: 8px;
+  --text-color: whitesmoke;
+  --backgounrd-color: white;
+
+  /* 눈이 아프니 흰 바탕을 없애준다. */
+  background: beige;
+  /* 이건 margin의 영향만 받아서 내가 복잡한 생각을 하지 않도록 */
+  box-sizing: border-box;
+}
