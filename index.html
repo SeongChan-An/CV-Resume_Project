@@ -202,39 +202,44 @@
       </div>      
     </section>
     <!-- Portfolio -->
-    <section id="portfolio">
-      <h2>My portfolio</h2>
-      <h3>Projects</h3>
-      <div class="portfolio__categories">
-        <button class="category__btn">
-          All<span class="category__count"></span>
-        </button>
-        <button class="category__btn">
-          Front-end<span class="category__count"></span>
-        </button>
-        <button class="category__btn">
-          Back-end<span class="category__count"></span></button>
-        <button class="category__btn">ETC<span class="category__count"></span></button>
-      </div>
-      <div class="portfolio__projects">
-        <a href="https://github.com/SeongChan-An/team6_project" class="project" target blank>
-          <img src="images/projects/Tangerine.png" alt="Tangerine Project">
-          <div class="project__description">
-            <h3>Tangerine Market</h3>
-            <span>Clone coding Carrot Market with HTML and CSS</span>
-          </div>
-        </a>
-        <a href="https://github.com/SeongChan-An/Simple_SNS_Node" class="project" target blank>
-          <img src="images/projects/Node_Project.png" alt="Tangerine Project">
-          <div class="project__description">
-            <h3>Simple SNS</h3>
-            <span>make the simple sns page with Node</span>
-          </div>
-        </a>
-      </div>
+    <section id="portfolio" class="section">
+      <div class="section__container">
+        <h2>My portfolio</h2>
+        <h3>Projects</h3>
+        <div class="portfolio__categories">
+          <button class="category__btn active">
+            All<span class="category__count">2</span>
+          </button>
+          <button class="category__btn">
+            Front-end<span class="category__count">1</span>
+          </button>
+          <button class="category__btn">
+            Back-end<span class="category__count">1</span>
+          </button>
+          <button class="category__btn">
+            ETC<span class="category__count">0</span>
+          </button>
+        </div>
+        <div class="portfolio__projects">
+          <a href="https://github.com/SeongChan-An/team6_project" class="project" target blank>
+            <img src="images/projects/Tangerine.png" alt="Tangerine Project" class="project__img">
+            <div class="project__description">
+              <h3>Tangerine Market</h3>
+              <span>Clone coding Carrot Market with HTML and CSS</span>
+            </div>
+          </a>
+          <a href="https://github.com/SeongChan-An/Simple_SNS_Node" class="project" target blank>
+            <img src="images/projects/Node_Project.png" alt="Tangerine Project" class="project__img">
+            <div class="project__description">
+              <h3>Simple SNS</h3>
+              <span>make the simple sns page with Node</span>
+            </div>
+          </a>
+        </div>
+      </div>      
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h2 class="contact__title">Let's talk</h2>
       <h3 class="contact__email">tjscks0510@gmail.com</h3>
       <div class="contact__links">
@@ -242,7 +247,7 @@
           <i class="fab fa-github"></i>
         </a>        
       </div>
-      <p class="contact_rights">2021 Seongchan An - All rights reserved </p>
+      <p class="contact__rights">2021 Seongchan An - All rights reserved </p>
     </section>
 </body>
 </html>
