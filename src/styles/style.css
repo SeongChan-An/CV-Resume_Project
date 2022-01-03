@@ -124,6 +124,27 @@ p {
   margin: 4px 0;
 }
 
+/* Fixed Button */
+.arrow_up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  font-size: 50px;
+  background-color: var(--color-navy-light);
+  color: var(--color-white);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--animation-duration) ease;
+}
+
+.arrow_up.visible {
+  opacity: 0.9;
+  pointer-events: auto;
+}
+
 /* Navbar */
 #navbar {
   display: flex;

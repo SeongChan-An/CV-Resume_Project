@@ -8,6 +8,9 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 const home = document.querySelector(".home__container");
 const homeHeight = home.getBoundingClientRect().height;
 
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector(".arrow_up");
+
 window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
   // console.log(navbarHeight);
@@ -18,6 +21,17 @@ window.addEventListener("scroll", () => {
   }
 
   home.style.opacity = 1 - window.scrollY / homeHeight;
+
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+arrowUp.addEventListener("click", () => {
+  console.log("clicked");
+  scrollingSection("#home");
 });
 
 // Handle scrolling when tapping on the navbar menu
