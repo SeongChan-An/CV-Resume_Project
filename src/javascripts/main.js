@@ -4,6 +4,10 @@
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
+// Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
 window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
   // console.log(navbarHeight);
@@ -12,6 +16,8 @@ window.addEventListener("scroll", () => {
   } else {
     navbar.classList.add("navbar__scroll");
   }
+
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // Handle scrolling when tapping on the navbar menu
@@ -28,7 +34,7 @@ navbarMenu.addEventListener("click", (event) => {
   scrollingSection(link);
 });
 
-// Handle  click on "contact me" button on home
+// Handle  click on Contact button on home
 const contactBtn = document.querySelector(".home__btnContact");
 contactBtn.addEventListener("click", () => {
   scrollingSection("#contact");

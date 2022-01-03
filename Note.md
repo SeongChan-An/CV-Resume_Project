@@ -36,6 +36,11 @@
 
 ## **JS**
 
+### - getBoundingClientRect
+
+상대위치
+[MDN](https://developer.mozilla.org/ko/docs/Web/API/Element/getBoundingClientRect)
+
 ### - ScrollIntoView
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)
