@@ -33,3 +33,9 @@
 ### - Attribute selector
 
 [MDN](https://developer.mozilla.org/ko/docs/Web/CSS/Attribute_selectors)
+
+## **JS**
+
+### - ScrollIntoView
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)
