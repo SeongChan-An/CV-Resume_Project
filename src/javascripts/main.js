@@ -45,6 +45,7 @@ navbarMenu.addEventListener("click", (event) => {
     return;
   }
 
+  navbarMenu.classList.remove("show");
   scrollingSection(link);
 });
 
@@ -75,6 +76,14 @@ categoryBtn.addEventListener("click", (event) => {
   if (filter == null) {
     return;
   }
+
+  // Remove selection from the previous item and select the new one
+  const selected = document.querySelector(".category__btn.selected");
+  selected.classList.remove("selected");
+  const target =
+    event.target.nodeName === "BUTTON" ? event.target : event.target.parentNode;
+  target.classList.add("selected");
+
   //
   projectContainer.classList.add("ani_out");
 
