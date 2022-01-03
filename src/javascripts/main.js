@@ -63,6 +63,33 @@ function scrollingSection(selector) {
   });
 }
 
+// Projects
+const categoryBtn = document.querySelector(".portfolio__categories");
+const projectContainer = document.querySelector(".portfolio__projects");
+const projects = document.querySelectorAll(".project");
+
+categoryBtn.addEventListener("click", (event) => {
+  const filter =
+    event.target.dataset.filter || event.target.parentNode.dataset.filter;
+
+  if (filter == null) {
+    return;
+  }
+  //
+  projectContainer.classList.add("ani_out");
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("ani_out");
+  }, 300);
+});
+
 // Responsive
 const toggleBtn = document.querySelector(".navbar__toggleBtn");
 const menu = document.querySelector(".navbar__menu");
