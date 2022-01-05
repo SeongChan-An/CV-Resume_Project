@@ -35,6 +35,7 @@ arrowUp.addEventListener("click", () => {
 });
 
 // Handle scrolling when tapping on the navbar menu
+const standardWidth = 768;
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
   // console.log(event.target.dataset.link);
@@ -54,15 +55,6 @@ const contactBtn = document.querySelector(".home__btnContact");
 contactBtn.addEventListener("click", () => {
   scrollingSection("#contact");
 });
-
-function scrollingSection(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({
-    behavior: "smooth",
-    block: "end",
-    inline: "nearest",
-  });
-}
 
 // Projects
 const categoryBtn = document.querySelector(".portfolio__categories");
@@ -105,4 +97,100 @@ const menu = document.querySelector(".navbar__menu");
 
 toggleBtn.addEventListener("click", () => {
   menu.classList.toggle("show");
+});
+
+/**
+ * Menubar
+ * Need to get the information from sections
+ *
+ */
+
+const sectionIds = ["#home", "#about", "#skills", "#portfolio", "#contact"];
+const sections = sectionIds.map((id) => document.querySelector(id));
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+
+let selectedNavIndex = getIdxOfSectionOnViewPort();
+let selectedNavItem = navItems[selectedNavIndex];
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove("active");
+  selectedNavItem = selected;
+  selectedNavItem.classList.add("active");
+}
+
+function scrollingSection(selector) {
+  const scrollTo = document.querySelector(selector);
+  if (window.innerWidth > standardWidth) {
+    scrollTo.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
+  } else {
+    scrollTo.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+  }
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      console.log("y");
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      // 스크롤링이 아래로 되어서 페이지가 올라옴
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach((section) => observer.observe(section));
+
+window.addEventListener("wheel", () => {
+  console.log(`scrollY: ${window.scrollY}`);
+
+  console.log(`window.innerHeight: ${window.innerHeight}`);
+
+  console.log(`document.body.clientHeight: ${document.body.clientHeight}`);
+
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    console.log("요기");
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
+
+// 새로고침 시
+function getIdxOfSectionOnViewPort() {
+  const section = document
+    .elementFromPoint(window.innerWidth / 2, window.innerHeight * (2 / 3))
+    .closest(".section");
+
+  const idx = sectionIds.indexOf(`#${section.id}`);
+
+  return idx;
+}
+
+window.addEventListener("load", () => {
+  selectNavItem(navItems[selectedNavIndex]);
 });
