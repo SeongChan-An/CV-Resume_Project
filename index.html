@@ -39,7 +39,15 @@
     <section id="home">
       <div class="home__container">
         <img src="images/Holland.png" alt="Seongchan's photo in Netherlands" class="home__photo">
-        <h1 class="home__title">Hello, <br/> I'm Seongchan</h1>
+        <div class="home__txtArea">
+          <h1 class="home__title">Hello, <br/> 
+            <span
+            class="home__title-writer"
+            data-wait="2500"
+            data-words='["I am Seongchan.", "I am a Front-end Developer.","I love to Develop."]'
+            >Seongchan</span>
+          </h1>
+        </div>        
         <h2 class="home__description">To keep moving forward</h2>
         <button class="home__btnContact">Contact Me</button>
       </div>
@@ -261,5 +269,7 @@
     <button class="arrow_up">
       <i class="fas fa-arrow-up"></i>
     </button>
+    
+    <script src="src/javascripts/typewriter.js" defer></script>
 </body>
 </html>

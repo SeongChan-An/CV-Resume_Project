@@ -223,6 +223,13 @@ p {
   color: var(--color-white);
 }
 
+.home__title {
+  height: 65px;
+  margin-bottom: 30px;
+}
+.home__description {
+  margin-top: 45px;
+}
 .home__btnContact {
   margin: 24px;
   padding: 8px 12px;
@@ -557,6 +564,11 @@ p {
   .home__photo {
     width: 200px;
     height: 200px;
+  }
+
+  .home__title {
+    /* height: 65px; */
+    margin-bottom: 0px;
   }
 
   .about__majors {

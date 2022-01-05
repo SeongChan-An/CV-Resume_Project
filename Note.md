@@ -49,3 +49,8 @@
 
 스크롤 할 때 현재 보여지는 영역에 따라 이벤트나 애니메이션을 처리할 때 이용
 [MDN](https://developer.mozilla.org/en/docs/Web/API/Intersection_Observer_API)
+
+### - TypeWriter
+
+- [refer to codepen](https://codepen.io/hi-im-si/pen/DHoup)
+- [typewriter API](https://github.com/tameemsafi/typewriterjs)
