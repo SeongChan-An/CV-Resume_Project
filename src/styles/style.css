@@ -87,6 +87,11 @@ button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  /* iPhone ? */
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  padding: 0;
 }
 
 /* Typography */
